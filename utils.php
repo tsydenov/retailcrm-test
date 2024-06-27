@@ -6,6 +6,13 @@ use RetailCrm\Api\Interfaces\ClientExceptionInterface;
 use RetailCrm\Api\Model\Request\Orders\OrdersRequest;
 use RetailCrm\Api\Model\Response\Orders\OrdersResponse;
 
+/**
+ * Sends request on a specific page
+ *
+ * @param Client $client
+ * @param integer $page
+ * @return OrdersResponse
+ */
 function getOrdersFromPage(Client $client, int $page = 1): OrdersResponse
 {
     $request = new OrdersRequest();
